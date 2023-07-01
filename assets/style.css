@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+:root{
+    --transition-time: .3s;
+    --thumb-bg: #CF4034;
+    --thumb-bg-hover: #FC6A58;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 32px;
+    background: #3B4664;
+}
+
+main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 476px;
+    color: white;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.theme{
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-right: 1em;
+}
+.top article{
+    text-transform: uppercase;
+    align-items: center;
+    display: flex;
+}
+.numbers{
+    display: flex;
+    width: 55px;
+    margin-left: .8em;
+    font-size: 12px;
+    justify-content: space-between;
+}
+.numbers p{
+    margin: 0;
+}
+
+.range{
+    background: #181F32;
+    padding: 0 5px;
+    -webkit-appearance: none;
+    background: #181F32;
+    outline: none;
+    width: 60px;
+    height: 26px;
+    border-radius: 20px;
+}
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%; 
+    background-color: var(--thumb-bg);
+    cursor: pointer;
+}
+.range::-webkit-slider-thumb:hover {
+    background-color: var(--thumb-bg-hover);
+    transition: var(--transition-time);
+}
+.range::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%; 
+    background-color: var(--thumb-bg);
+    cursor: pointer;
+}
+.range::-moz-range-thumb:hover {
+    background-color: var(--thumb-bg-hover);
+    transition: var(--transition-time);
+}
+
+.buttonsGrid{
+    display: grid;
+    width: 420px;
+    height: 368px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    background: #252D45;
+    row-gap: 24px;
+    column-gap: 24px;
+    padding: .89em;
+    border-radius: .3em;
+}
+.buttons{
+    background: #EAE3DB;
+    box-shadow: 0 3px 0 #B3A39D;
+}
+
+button{
+    height: 54px;
+    border: none;
+    border-radius: .3em;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 32px;
+    color: #474E5C;
+    cursor: pointer;
+}
+
+.reset{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.resolve{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background: #D13F30;
+    box-shadow: 0 3px 0 #93261A;
+}
+.resolve:hover{
+    transition: var(--transition-time);
+    background: #F96C5B;
+}
+
+.resetAndDel{
+    background: #647299;
+    box-shadow: 0 3px 0 #424E72;
+}
+.resetAndDel:hover{
+    background: #A2B2E3;
+    transition: var(--transition-time);
+}
+
+.resetAndDel, .resolve{
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.articleScreen{
+    position: relative;
+    width: 100%;
+    height: 118px;
+    background: #181F32;
+    margin-bottom: 1em;
+    border-radius: .3em;
+}
+
+#screen{
+    position: absolute;
+    top: 50%;
+    right: .5em;
+    transform: translateY(-50%);
+    font-size: 50px;
+}
+
+@media screen and (max-width: 492px) {
+    main{
+        width: 375px;
+    }
+    .buttonsGrid{
+        width: 320px;
+    }
+}
+@media screen and (max-width: 390px) {
+    main{
+        width: 250px;
+    }
+    .buttonsGrid{
+        width: 200px;
+        row-gap: 2px;
+        column-gap: 2px;
+    }
+}
+@media screen and (max-width: 269px) {
+    main{
+        width: 250px;
+    }
+    .buttonsGrid{
+        width: 200px;
+        row-gap: 0;
+        column-gap: 0;
+    }
+}

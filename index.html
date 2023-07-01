@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body>
+    <main>
+      <section class="top">
+        <h3>calc</h3>
+        <article>
+          <h6 class="theme">theme</h6>
+          <aside>
+            <div class="numbers">
+              <p>1</p>
+              <p>2</p>
+              <p>3</p>
+            </div>
+            <input id="chooseTheme" min="0" value="0" class="range" type="range" max="2">
+          </aside>
+        </article>
+      </section>
+      <article class="articleScreen">
+        <div id="screen"></div>
+      </article>
+      <section class="buttonsGrid">
+        <button onclick="math('7')" class="buttons">7</button>
+        <button onclick="math('8')" class="buttons">8</button>
+        <button onclick="math('9')" class="buttons">9</button>
+        <button onclick="math('del')" class="resetAndDel">del</button>
+        <button onclick="math('4')" class="buttons">4</button>
+        <button onclick="math('5')" class="buttons">5</button>
+        <button onclick="math('6')" class="buttons">6</button>
+        <button onclick="math('plus')" class="buttons">+</button>
+        <button onclick="math('1')" class="buttons">1</button>
+        <button onclick="math('2')" class="buttons">2</button>
+        <button onclick="math('3')" class="buttons">3</button>
+        <button onclick="math('minus')" class="buttons">-</button>
+        <button onclick="math('point')" class="buttons">.</button>
+        <button onclick="math('0')" class="buttons">0</button>
+        <button onclick="math('divide')" class="buttons">/</button>
+        <button onclick="math('multiply')" class="buttons">x</button>
+        <button onclick="math('reset')" class="reset resetAndDel">reset</button>
+        <button onclick="math('equal')" class="resolve">=</button>
+      </section>
+    </main>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
